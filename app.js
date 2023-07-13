@@ -42,10 +42,10 @@ app.post("/",function(req,res) {
 
     //send the JSON to mailchimp
     //post data to external resource using https
-    const url = "https://us21.api.mailchimp.com/3.0/lists/a47086c60c" ;
+    const url = {MAILCHIMP} ;
     const options = {
         method : "POST",
-        auth:"mohammed1:e7c8fed4e1c94b41a4562aaab0e57dd8-us21"
+        auth:{insert API Key}
     }
     //log the response after parsing
     const request = https.request(url, options, function(response) {
@@ -81,8 +81,5 @@ app.listen(process.env.PORT || 3000,function(){
     console.log("Server up and running on PORT 3000");
 });
 
-//API Key
-//e7c8fed4e1c94b41a4562aaab0e57dd8-us21
 
-//List Id
-//a47086c60c
+
